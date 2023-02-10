@@ -8,6 +8,7 @@ import Post from './components/Home/Post';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import AddPost from './components/Home/AddPost';
+import ViewPost from './components/Home/ViewPost';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/post/:id" element={<Post />} />
           <Route path="/addpost" element={<AddPost />} />
+          <Route path="/viewPost/:id" element={<ViewPost />} />
         </Routes>
       </BrowserRouter>
     </div>

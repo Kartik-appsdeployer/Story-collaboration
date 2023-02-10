@@ -1,0 +1,75 @@
+.AllPost-main{
+    padding: 100px;
+}
+.allPost-center-content{
+    border: 1px solid rgb(164, 164, 164);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.allPost-image{
+    margin-right: 20px;
+}
+.name-and-date{
+    display: flex;
+    flex-direction: row; 
+    margin-bottom: 10px;
+}
+.allPost-title{
+    margin-bottom: 10px;
+}
+.allPost-username{
+    margin-right: 20px;
+}
+.allPost-desc{
+    margin-bottom: 50px; 
+}
+.read-More{
+    color: black;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 5px;
+    transition: 0.5s;
+}
+.read-More:hover{
+    background: black;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid white;
+}
+.request-for-collaboration{
+    background: black;
+    color: white;
+    padding: 3px;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.request-for-collaboration:hover{
+    background: white;
+    color: black;
+}
+.actions{
+    display: flex;
+    justify-content: space-between;
+}
+.mark-as-completed{
+    background: black;
+    color: white;
+    padding: 3px;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.mark-as-completed:hover{
+    background: white;
+    color: black;
+}

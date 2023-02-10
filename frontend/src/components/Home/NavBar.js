@@ -13,7 +13,7 @@ const NavBar = () => {
                 </div>
                 <div className="list2">
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
-                <Link to="/addpost" className='addPost'>Add Post</Link>
+                <Link to="/addpost" className='addPost'>Add Story</Link>
                 </div>
             </div>
         </div>

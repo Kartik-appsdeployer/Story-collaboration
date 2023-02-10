@@ -30,11 +30,9 @@ body('email', 'Enter a Valid Email').isEmail()], async (req, res) => {
             }
         }
         const authToken = jwt.sign(data, 'privateKey');
-        res.cookie('access-token', authToken, {
-            httpOnly: true
-        }).status(200).json({success: true, message: "Logged in!!"})
+        res.status(200).json({success: true, message: "Logged in!!", authToken: authToken})
     } catch (error) {
-        res.status(400).json({ success: false, error: error.error });
+        res.status(400).json({ success: false, error: error.message });
     }
 })
 

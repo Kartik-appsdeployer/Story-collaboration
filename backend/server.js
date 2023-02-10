@@ -3,7 +3,6 @@ const app = express();
 const dbconnect = require('./dpSetup/db');
 const cors = require('cors')
 var bodyParser = require("body-parser");
-const cookieParser = require('cookie-parser');
 
 
 dbconnect();
@@ -13,7 +12,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
   }));
-  app.use(cookieParser()); 
 
 const Routes = require('./routes/Routes');
 app.use('/routes', Routes);

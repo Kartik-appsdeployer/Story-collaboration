@@ -15,7 +15,12 @@ const Login = () => {
     e.preventDefault();
     axios.post('http://localhost:3001/routes/login', userData).then((res) => {
       toast.success(res.data.message)
+      localStorage.setItem("Token", res.data.authToken)
       navigate('/')
+      // const data = localStorage.getItem("Token")
+      // const ID = JSON.parse(window.atob(data.split('.')[1]))
+      // console.log(ID.user.id)
+      // fetch(data).then((res) => console.log(res)).catch((err) => console.log(err.message));
     }).catch((err) => {
       toast.error(err.response.data.error)
     })
