@@ -4,8 +4,11 @@ import './AddPost.css';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setStory } from '../../app/storySlice/storySlice';
 
 const AddPost = () => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const data = localStorage.getItem("Token")
     const ID = JSON.parse(window.atob(data.split('.')[1]))
@@ -24,7 +27,9 @@ const AddPost = () => {
         e.preventDefault();
         console.log(storyData)
         axios.post('http://localhost:3001/routes/addPost', storyData).then((res) => {
+            console.log(res.data.message);
             toast.success(res.data.status)
+            dispatch(setStory(res.data.message));
             navigate('/');
         })
         .catch((err) => {

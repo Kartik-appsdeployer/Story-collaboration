@@ -27,10 +27,11 @@ body('email', 'Enter a Valid Email').isEmail()], async (req, res) => {
                 id: user.id,
                 name: user.name,
                 email: user.email,
+                date: user.date
             }
         }
         const authToken = jwt.sign(data, 'privateKey');
-        res.status(200).json({success: true, message: "Logged in!!", authToken: authToken})
+        res.status(200).json({success: true, message: "Logged in!!", authToken: authToken, data: data})
     } catch (error) {
         res.status(400).json({ success: false, error: error.message });
     }
